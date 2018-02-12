@@ -1,0 +1,36 @@
+{
+  "kind": "ImageStreamList",
+  "apiVersion": "v1",
+  "metadata": {},
+  "items": [
+  	{
+      "kind": "ImageStream",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "php-mongodb",
+        "annotations": {
+          "openshift.io/display-name": "PHP (MongoDB)"
+        }
+      },
+      "spec": {
+        "tags": [
+          {
+            "name": "latest",
+            "annotations": {
+              "openshift.io/display-name": "PHP 7.1 (MongoDB)",
+              "openshift.io/provider-display-name": "OpenShift Evangelists",
+              "description": "Build and run PHP applications on CentOS 7.",
+              "iconClass": "icon-php",
+              "tags": "builder,php",
+              "supports":"php"
+            },
+            "from": {
+              "kind": "DockerImage",
+              "name": "docker.io/osevg/php-s2i:latest"
+            }
+          }
+        ]
+      }   
+    }
+  ]
+}
