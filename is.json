@@ -17,7 +17,7 @@
           {
             "name": "latest",
             "annotations": {
-              "openshift.io/display-name": "PHP 7.1 (MongoDB)",
+              "openshift.io/display-name": "PHP 7.3 (MongoDB)",
               "openshift.io/provider-display-name": "OpenShift Evangelists",
               "description": "Build and run PHP applications on CentOS 7.",
               "iconClass": "icon-php",
@@ -26,7 +26,7 @@
             },
             "from": {
               "kind": "DockerImage",
-              "name": "docker.io/osevg/php-s2i:latest"
+              "name": "quay.io/osevg/php-s2i:latest"
             }
           }
         ]

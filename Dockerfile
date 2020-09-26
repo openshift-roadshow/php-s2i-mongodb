@@ -9,7 +9,7 @@ RUN curl -o epel.rpm https://dl.fedoraproject.org/pub/epel/epel-release-latest-7
     curl -o remi.rpm  http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
     rpm -Uvh remi.rpm epel.rpm && rm remi.rpm epel.rpm
 
-RUN yum install -y --setopt=tsflags=nodocs yum-utils && yum-config-manager --enable remi-php71 && \
+RUN yum install -y --setopt=tsflags=nodocs yum-utils && yum-config-manager --enable remi-php73 && \
     yum install -y --setopt=tsflags=nodocs php php-mongodb git unzip && yum clean all && rm -rf /var/cache/yum
 
 RUN mkdir -p /usr/libexec/s2i
